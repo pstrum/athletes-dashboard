@@ -1,0 +1,18 @@
+{
+  "athletes": [{
+    "name": "peter",
+    "id": "17173330",
+    "primary": "Run",
+    "bearer": "0c5dc51a2ca5425884af3e0b8f81ba2c87c78a26"
+  }, {
+    "name": "jon",
+    "id": "4130820",
+    "primary": "Run",
+    "bearer": "b22041a3f0a38a2db1f69c2a69e5cc6c8c398aba"
+  }, {
+    "name": "gina",
+    "id": "12044418",
+    "primary": "Run",
+    "bearer": "66a8183fd694b30fcbbd711370a348338b91bdbe"
+  }]
+}
