@@ -248,7 +248,7 @@ html, body {
       left: -48px;
       top: 50%;
       transform: translateY(-63%);
-      background: image-url("../images/icons/bike.svg") no-repeat center bottom;
+      background: url("/images/icons/bike.svg") no-repeat center bottom;
       background-size: contain; }
     .athlete-record .primary-activity span {
       font-size: 3.4375rem;
@@ -262,25 +262,25 @@ html, body {
       right: -16px;
       top: 7px; }
     .athlete-record .primary-activity[data-activity-type="Ride"] span:before {
-      background-image: url("/public/images/icons/bike.svg"); }
+      background-image: url("/images/icons/bike.svg"); }
     .athlete-record .primary-activity[data-activity-type="Run"] span:before {
-      background-image: url("/public/images/icons/run.svg"); }
+      background-image: url("/images/icons/run.svg"); }
     .athlete-record .primary-activity[data-activity-type="Swim"] span:before {
-      background-image: url("/public/images/icons/swim.svg"); }
+      background-image: url("/images/icons/swim.svg"); }
     .athlete-record .primary-activity[data-activity-type="Hike"] span:before {
-      background-image: url("/public/images/icons/hike.svg"); }
+      background-image: url("/images/icons/hike.svg"); }
     .athlete-record .primary-activity[data-activity-type="AlpineSki"] span:before {
-      background-image: url("/public/images/icons/alpine-ski.svg"); }
+      background-image: url("/images/icons/alpine-ski.svg"); }
     .athlete-record .primary-activity[data-activity-type="Snowboard"] span:before {
-      background-image: url("/public/images/icons/snowboard.svg"); }
+      background-image: url("/images/icons/snowboard.svg"); }
     .athlete-record .primary-activity[data-activity-type="Crossfit"] span:before {
-      background-image: url("/public/images/icons/crossfit.svg"); }
+      background-image: url("/images/icons/crossfit.svg"); }
     .athlete-record .primary-activity[data-activity-type="StandUpPaddling"] span:before {
-      background-image: url("/public/images/icons/paddle.svg"); }
+      background-image: url("/images/icons/paddle.svg"); }
     .athlete-record .primary-activity[data-activity-type="IceSkate"] span:before {
-      background-image: url("/public/images/icons/ice-skate.svg"); }
+      background-image: url("/images/icons/ice-skate.svg"); }
     .athlete-record .primary-activity[data-activity-type="WeightTraining"] span:before {
-      background-image: url("/public/images/icons/weight-training.svg"); }
+      background-image: url("/images/icons/weight-training.svg"); }
   .athlete-record .all-activities {
     box-shadow: inset 0 0 0 1px white;
     width: 100%;
@@ -304,7 +304,7 @@ html, body {
       width: 30px;
       height: 30px;
       margin: 0 auto 4px;
-      background: url("/public/images/icons/bike.svg") no-repeat center bottom;
+      background: url("/images/icons/bike.svg") no-repeat center bottom;
       background-size: contain; }
     .athlete-record .all-activities mark {
       text-align: center;
@@ -312,25 +312,25 @@ html, body {
       line-height: 1;
       width: 100%; }
     .athlete-record .all-activities .bike b {
-      background-image: url("/public/images/icons/bike.svg"); }
+      background-image: url("/images/icons/bike.svg"); }
     .athlete-record .all-activities .run b {
-      background-image: url("/public/images/icons/run.svg"); }
+      background-image: url("/images/icons/run.svg"); }
     .athlete-record .all-activities .swim b {
-      background-image: url("/public/images/icons/swim.svg"); }
+      background-image: url("/images/icons/swim.svg"); }
     .athlete-record .all-activities .alpine-ski b {
-      background-image: url("/public/images/icons/alpine-ski.svg"); }
+      background-image: url("/images/icons/alpine-ski.svg"); }
     .athlete-record .all-activities .crossfit b {
-      background-image: url("/public/images/icons/crossfit.svg"); }
+      background-image: url("/images/icons/crossfit.svg"); }
     .athlete-record .all-activities .snowboard b {
-      background-image: url("/public/images/icons/snowboard.svg"); }
+      background-image: url("/images/icons/snowboard.svg"); }
     .athlete-record .all-activities .ice-skate b {
-      background-image: url("/public/images/icons/ice-skate.svg"); }
+      background-image: url("/images/icons/ice-skate.svg"); }
     .athlete-record .all-activities .paddle b {
-      background-image: url("/public/images/icons/paddle.svg"); }
+      background-image: url("/images/icons/paddle.svg"); }
     .athlete-record .all-activities .weight-training b {
-      background-image: url("/public/images/icons/weight-training.svg"); }
+      background-image: url("/images/icons/weight-training.svg"); }
     .athlete-record .all-activities .hike b {
-      background-image: url("/public/images/icons/hike.svg"); }
+      background-image: url("/images/icons/hike.svg"); }
 
 .activity-summary {
   margin-bottom: 85px;
@@ -369,7 +369,7 @@ html, body {
     overflow: hidden;
     padding-left: 33px;
     box-sizing: border-box;
-    background: url("/public/images/icons/run.svg") no-repeat left center;
+    background: url("/images/icons/run.svg") no-repeat left center;
     background-size: 33px 33px; }
     .activity-summary .stats li {
       display: block;
@@ -379,22 +379,22 @@ html, body {
       font-weight: 300;
       margin-left: 20px; }
     .activity-summary .stats[data-type="Ride"] {
-      background-image: url("/public/images/icons/bike.svg"); }
+      background-image: url("/images/icons/bike.svg"); }
     .activity-summary .stats[data-type="Run"] {
-      background-image: url("/public/images/icons/run.svg"); }
+      background-image: url("/images/icons/run.svg"); }
     .activity-summary .stats[data-type="Swim"] {
-      background-image: url("/public/images/icons/swim.svg"); }
+      background-image: url("/images/icons/swim.svg"); }
     .activity-summary .stats[data-type="Hike"] {
-      background-image: url("/public/images/icons/hike.svg"); }
+      background-image: url("/images/icons/hike.svg"); }
     .activity-summary .stats[data-type="AlpineSki"] {
-      background-image: url("/public/images/icons/alpine-ski.svg"); }
+      background-image: url("/images/icons/alpine-ski.svg"); }
     .activity-summary .stats[data-type="Snowboard"] {
-      background-image: url("/public/images/icons/snowboard.svg"); }
+      background-image: url("/images/icons/snowboard.svg"); }
     .activity-summary .stats[data-type="Crossfit"] {
-      background-image: url("/public/images/icons/crossfit.svg"); }
+      background-image: url("/images/icons/crossfit.svg"); }
     .activity-summary .stats[data-type="StandUpPaddling"] {
-      background-image: url("/public/images/icons/paddle.svg"); }
+      background-image: url("/images/icons/paddle.svg"); }
     .activity-summary .stats[data-type="IceSkate"] {
-      background-image: url("/public/images/icons/ice-skate.svg"); }
+      background-image: url("/images/icons/ice-skate.svg"); }
     .activity-summary .stats[data-type="WeightTraining"] {
-      background-image: url("/public/images/icons/weight-training.svg"); }
+      background-image: url("/images/icons/weight-training.svg"); }
