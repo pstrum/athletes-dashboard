@@ -1,0 +1,68 @@
+.activity-summary {
+  margin-bottom: 85px;
+  position: relative;
+  .map {
+    float: left;
+    width: 52.8571428571429%;
+  }
+  .vitals {
+    float: right;
+    width: 43.2142857142857%;
+  }
+  .activity-date {
+    display: block;
+    font: $font-secondary;
+    font-size: 5.9375rem;
+    line-height: 0.85;
+    margin-bottom: 20px;
+    sup {
+      padding-left: 10px;
+      font-size: 0.6em;
+    }
+  }
+  time {
+    display: inline;
+  }
+  .name,
+  .stats {
+    opacity: 0.38;
+  }
+  .name {
+    white-space: nowrap;
+    font-size: 2.125rem;
+    font-weight: 500;
+    overflow: hidden;
+    width: 100%;
+    text-overflow: ellipsis;
+    line-height: 1;
+  }
+  .stats {
+    height: 33px;
+    width: 100%;
+    overflow: hidden;
+    padding-left: 33px;
+    box-sizing: border-box;
+    background: url("/public/images/icons/run.svg") no-repeat left center;
+    background-size: 33px 33px;
+    li {
+      display: block;
+      float: left;
+      font-size: 2.125rem;
+      line-height: 1.2;
+      font-weight: 300;
+      margin-left: 20px;
+    }
+    &[data-type="Ride"]             { background-image: url("/public/images/icons/bike.svg"); }
+    &[data-type="Run"]              { background-image: url("/public/images/icons/run.svg"); }
+    &[data-type="Swim"]             { background-image: url("/public/images/icons/swim.svg"); }
+    &[data-type="Hike"]             { background-image: url("/public/images/icons/hike.svg"); }
+    &[data-type="AlpineSki"]        { background-image: url("/public/images/icons/alpine-ski.svg"); }
+    &[data-type="Snowboard"]        { background-image: url("/public/images/icons/snowboard.svg"); }
+    &[data-type="Crossfit"]         { background-image: url("/public/images/icons/crossfit.svg"); }
+    &[data-type="StandUpPaddling"]  { background-image: url("/public/images/icons/paddle.svg"); }
+    &[data-type="IceSkate"]         { background-image: url("/public/images/icons/ice-skate.svg"); }
+    &[data-type="WeightTraining"]   { background-image: url("/public/images/icons/weight-training.svg"); }
+
+  }
+}
+

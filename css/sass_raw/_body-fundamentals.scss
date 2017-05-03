@@ -1,0 +1,22 @@
+/*
+================================================================
+BODY
+================================================================ */
+body {
+	font-size: 100%;
+  line-height: 1.35;
+	color: white;
+  background: black;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  font: $font-primary;
+  text-transform: uppercase;
+}
+html,body {
+  height: 100%;
+}
+
