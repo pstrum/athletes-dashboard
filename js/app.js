@@ -3,7 +3,7 @@ import { render } from 'react-dom'
 import Dashboard from './Dashboard'
 import '../css/main.scss'
 
-const App = React.createClass({
+class App extends React.Component {
   render () {
     return (
       <div className='app'>
@@ -11,6 +11,6 @@ const App = React.createClass({
       </div>
     )
   }
-})
+}
 
 render(<App />, document.getElementById('app'))

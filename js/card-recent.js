@@ -1,23 +1,10 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Moment from 'react-moment'
-const { shape, string, number } = React.PropTypes
+const { shape, string, number } = PropTypes
+const mapFallback = require('../public/images/maps/fallback.png')
 
-const CardRecent = React.createClass({
-  propTypes: {
-    athlete: shape({
-      firstname: string,
-      lastname: string
-    }),
-    distance: number,
-    average_speed: number,
-    elapsed_time: number,
-    total_elevation_gain: number,
-    type: string,
-    map: shape({
-      summary_polyline: string
-    }),
-    start_date_local: string
-  },
+class CardRecent extends React.Component {
   render () {
     const activityType = this.props.type
     const date = this.props.start_date_local
@@ -29,6 +16,7 @@ const CardRecent = React.createClass({
     const speedSecondsPerMile = 1609.34 / this.props.average_speed
     const speedMinutes = Math.floor(speedSecondsPerMile / 60)
     const speedSeconds = Math.round(speedSecondsPerMile - speedMinutes * 60)
+    const formatSeconds = speedSeconds < 10 ? '0' + speedSeconds : speedSeconds
     const elapsedMinutes = Math.floor(this.props.elapsed_time / 60)
 
     let map = this.props.map
@@ -36,7 +24,7 @@ const CardRecent = React.createClass({
     if (this.props.map.summary_polyline !== null) {
       map = <img src={'http://maps.googleapis.com/maps/api/staticmap?sensor=false&size=503x284&path=weight:3%7Ccolor:red%7Cenc:' + this.props.map.summary_polyline} />
     } else {
-      map = <img src='/public/images/maps/fallback.png' alt='Map' />
+      map = <img src={mapFallback} alt='Map' />
     }
 
     let detailStat
@@ -44,7 +32,7 @@ const CardRecent = React.createClass({
     if (activityType === 'Ride') {
       detailStat = <li>{elevChange} ft</li>
     } else if (speedSecondsPerMile > 0) {
-      detailStat = <li>{speedMinutes}:{speedSeconds}/mi</li>
+      detailStat = <li>{speedMinutes}:{formatSeconds}/mi</li>
     }
 
     let distanceStat
@@ -62,7 +50,7 @@ const CardRecent = React.createClass({
         </figure>
         <div className='vitals'>
           <div className='activity-date'>
-            <Moment format='ddd'>{date}</Moment>
+            <Moment parse='YYYY-MM-DD HH:mm' format='ddd'>{date}</Moment>
             <sup>
               <Moment format='Do'>{date}</Moment>
             </sup>
@@ -76,6 +64,22 @@ const CardRecent = React.createClass({
       </article>
     )
   }
-})
+}
+
+CardRecent.propTypes = {
+  athlete: shape({
+    firstname: string,
+    lastname: string
+  }),
+  distance: number,
+  average_speed: number,
+  elapsed_time: number,
+  total_elevation_gain: number,
+  type: string,
+  map: shape({
+    summary_polyline: string
+  }),
+  start_date_local: string
+}
 
 export default CardRecent

@@ -1,25 +1,10 @@
 import React from 'react'
-const { number, string, shape } = React.PropTypes
+import PropTypes from 'prop-types'
+const { number, string, shape } = PropTypes
+const profileFallback = require('../public/images/headshots/fallback.png')
 
-const CardYtd = React.createClass({
-  propTypes: {
-    profile: string,
-    ytd_ride_totals: shape({
-      count: number,
-      distance: number
-    }),
-    ytd_run_totals: shape({
-      count: number,
-      distance: number
-    }),
-    ytd_swim_totals: shape({
-      count: number,
-      distance: number
-    }),
-    primary: string
-  },
+class CardYtd extends React.Component {
   render () {
-    const profile = this.props.profile
     const rideTotalCount = this.props.ytd_ride_totals.count
     const runTotalCount = this.props.ytd_run_totals.count
     const swimTotalCount = this.props.ytd_swim_totals.count
@@ -35,6 +20,11 @@ const CardYtd = React.createClass({
       totalDistance = <mark><span>{rideTotalDistance}</span> <i>mi</i></mark>
     } else if (primary === 'Swim') {
       totalDistance = <mark><span>{swimTotalDistance}</span> <i>mi</i></mark>
+    }
+
+    let profile = this.props.profile
+    if (this.props.profile === 'avatar/athlete/large.png') {
+      profile = profileFallback
     }
 
     return (
@@ -66,6 +56,23 @@ const CardYtd = React.createClass({
       </article>
     )
   }
-})
+}
+
+CardYtd.propTypes = {
+  profile: string,
+  ytd_ride_totals: shape({
+    count: number,
+    distance: number
+  }),
+  ytd_run_totals: shape({
+    count: number,
+    distance: number
+  }),
+  ytd_swim_totals: shape({
+    count: number,
+    distance: number
+  }),
+  primary: string
+}
 
 export default CardYtd

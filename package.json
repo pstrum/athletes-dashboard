@@ -10,19 +10,20 @@
     "lint": "eslint js/**/*.js webpack.config.js",
     "build": "webpack",
     "dev": "webpack-dev-server",
-    "watch": "npm run build -- --watch"
+    "watch": "npm run build -- --watch",
+    "deploy": "npm run build&&gh-pages -d public"
   },
+  "homepage": "https://pstrum.github.io/athletes-dashboard",
   "dependencies": {
     "axios": "^0.16.1",
     "dotenv-webpack": "^1.4.3",
     "moment": "^2.18.1",
     "moment-timezone": "^0.5.13",
-    "node-sass": "^4.5.2",
+    "prop-types": "^15.5.8",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-moment": "^0.2.2",
-    "react-router": "^4.1.1",
-    "sass-loader": "^6.0.3"
+    "react-router": "^4.1.1"
   },
   "devDependencies": {
     "babel-cli": "^6.24.0",
@@ -42,10 +43,17 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^6.10.3",
     "eslint-plugin-standard": "^3.0.1",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.11.1",
+    "gh-pages": "^0.12.0",
+    "node-sass": "^4.5.2",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "resolve-url-loader": "^2.0.2",
+    "sass-loader": "^6.0.3",
     "standard": "^10.0.2",
     "style-loader": "^0.16.1",
+    "url-loader": "^0.5.8",
     "webpack": "^2.4.1",
     "webpack-dev-server": "^2.4.4"
   }

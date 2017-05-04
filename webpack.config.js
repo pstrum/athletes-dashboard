@@ -1,5 +1,6 @@
 const path = require('path')
 const Dotenv = require('dotenv-webpack')
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   context: __dirname,
@@ -21,7 +22,7 @@ module.exports = {
     chunks: true
   },
   node: {
-    fs: "empty"
+    fs: 'empty'
   },
   module: {
     rules: [
@@ -38,22 +39,21 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: [{
-          loader: 'style-loader'
-        }, {
-          loader: 'css-loader', options: {
-            sourceMap: true
-          }
-        }, {
-          loader: 'sass-loader', options: {
-            sourceMap: true
-          }
-        }],
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          //resolve-url-loader may be chained before sass-loader if necessary
+          use: ['css-loader', 'resolve-url-loader', 'sass-loader?sourceMap']
+        }),
         exclude: /node_modules/
+      },
+      { 
+        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+        loader: 'url-loader?limit=100000'
       }
     ]
   },
   plugins: [
+    new ExtractTextPlugin('style.css'),
     new Dotenv({
       path: './.env'
     })

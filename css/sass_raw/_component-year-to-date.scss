@@ -93,7 +93,7 @@
       left: -48px;
       top: 50%;
       transform: translateY(-63%);
-      background: image-url("../images/icons/bike.svg") no-repeat center bottom;
+      background: url("images/icons/bike.svg") no-repeat center bottom;
       background-size: contain;
     }
     span {
@@ -110,16 +110,16 @@
       top: 7px;
     }
 
-    &[data-activity-type="Ride"] span:before                { background-image: url("/public/images/icons/bike.svg"); }
-    &[data-activity-type="Run"] span:before                 { background-image: url("/public/images/icons/run.svg"); }
-    &[data-activity-type="Swim"] span:before                { background-image: url("/public/images/icons/swim.svg"); }
-    &[data-activity-type="Hike"] span:before                { background-image: url("/public/images/icons/hike.svg"); }
-    &[data-activity-type="AlpineSki"] span:before           { background-image: url("/public/images/icons/alpine-ski.svg"); }
-    &[data-activity-type="Snowboard"] span:before           { background-image: url("/public/images/icons/snowboard.svg"); }
-    &[data-activity-type="Crossfit"] span:before            { background-image: url("/public/images/icons/crossfit.svg"); }
-    &[data-activity-type="StandUpPaddling"] span:before     { background-image: url("/public/images/icons/paddle.svg"); }
-    &[data-activity-type="IceSkate"] span:before            { background-image: url("/public/images/icons/ice-skate.svg"); }
-    &[data-activity-type="WeightTraining"] span:before      { background-image: url("/public/images/icons/weight-training.svg"); }
+    &[data-activity-type="Ride"] span:before                { background-image: url("images/icons/bike.svg"); }
+    &[data-activity-type="Run"] span:before                 { background-image: url("images/icons/run.svg"); }
+    &[data-activity-type="Swim"] span:before                { background-image: url("images/icons/swim.svg"); }
+    &[data-activity-type="Hike"] span:before                { background-image: url("images/icons/hike.svg"); }
+    &[data-activity-type="AlpineSki"] span:before           { background-image: url("images/icons/alpine-ski.svg"); }
+    &[data-activity-type="Snowboard"] span:before           { background-image: url("images/icons/snowboard.svg"); }
+    &[data-activity-type="Crossfit"] span:before            { background-image: url("images/icons/crossfit.svg"); }
+    &[data-activity-type="StandUpPaddling"] span:before     { background-image: url("images/icons/paddle.svg"); }
+    &[data-activity-type="IceSkate"] span:before            { background-image: url("images/icons/ice-skate.svg"); }
+    &[data-activity-type="WeightTraining"] span:before      { background-image: url("images/icons/weight-training.svg"); }
 
   }
   .all-activities {
@@ -149,7 +149,7 @@
       width: 30px;
       height: 30px;
       margin: 0 auto 4px;
-      background: url("/public/images/icons/bike.svg") no-repeat center bottom;
+      background: url("images/icons/bike.svg") no-repeat center bottom;
       background-size: contain;
     }
     mark {
@@ -159,16 +159,16 @@
       width: 100%;
     }
 
-    .bike b             { background-image: url("/public/images/icons/bike.svg"); }
-    .run b              { background-image: url("/public/images/icons/run.svg"); }
-    .swim b             { background-image: url("/public/images/icons/swim.svg"); }
-    .alpine-ski b       { background-image: url("/public/images/icons/alpine-ski.svg"); }
-    .crossfit b         { background-image: url("/public/images/icons/crossfit.svg"); }
-    .snowboard b        { background-image: url("/public/images/icons/snowboard.svg"); }
-    .ice-skate b        { background-image: url("/public/images/icons/ice-skate.svg"); }
-    .paddle b           { background-image: url("/public/images/icons/paddle.svg"); }
-    .weight-training b  { background-image: url("/public/images/icons/weight-training.svg"); }
-    .hike b             { background-image: url("/public/images/icons/hike.svg"); }
+    .bike b             { background-image: url("images/icons/bike.svg"); }
+    .run b              { background-image: url("images/icons/run.svg"); }
+    .swim b             { background-image: url("images/icons/swim.svg"); }
+    .alpine-ski b       { background-image: url("images/icons/alpine-ski.svg"); }
+    .crossfit b         { background-image: url("images/icons/crossfit.svg"); }
+    .snowboard b        { background-image: url("images/icons/snowboard.svg"); }
+    .ice-skate b        { background-image: url("images/icons/ice-skate.svg"); }
+    .paddle b           { background-image: url("images/icons/paddle.svg"); }
+    .weight-training b  { background-image: url("images/icons/weight-training.svg"); }
+    .hike b             { background-image: url("images/icons/hike.svg"); }
   }
 }
 

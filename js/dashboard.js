@@ -5,15 +5,35 @@ import CardRecent from './card-recent'
 import CardYtd from './card-ytd'
 import Moment from 'react-moment'
 
-const Dashboard = React.createClass({
-  getInitialState () {
-    return {
+class Dashboard extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
       timelineData: [],
       totalsData: [],
       pageloaded: false
     }
-  },
+  }
+
   componentDidMount () {
+    // let getToken = () => {
+      // let reqConfig = {
+        // method: 'post',
+        // url: 'https://www.strava.com/oauth/token',
+        // params: {
+          // client_id: 4522,
+          // client_secret: '5d18f1f128d837849163692911f14898883022e1',
+          // code: '76a563a0cb20f4977997887085eb5784ad6bebe7'
+        // }
+      // }
+
+      // axios(reqConfig)
+        // .then((response) => {
+          // console.log(response.data)
+        // })
+        // .catch((error) => console.error('axios error', error))
+    // }
+
     let getData = () => {
       let getTimeline = () => {
         let timelineOptions = {
@@ -36,7 +56,7 @@ const Dashboard = React.createClass({
       preload.athletes.map((athlete, idx) => {
         let statOptions = {
           method: 'get',
-          url: 'http://www.strava.com/api/v3/athletes/' + athlete.id + '/stats',
+          url: 'https://www.strava.com/api/v3/athletes/' + athlete.id + '/stats',
           headers: {
             'Authorization': 'Bearer ' + athlete.bearer
           }
@@ -44,6 +64,7 @@ const Dashboard = React.createClass({
         axios(statOptions).then((response) => {
           response.data.id = parseInt(athlete.id)
           response.data.primary = athlete.primary
+          response.data.firstname = athlete.name
           statsArray.push(response.data)
           if (idx === (preload.athletes.length - 1)) {
             getOtherData()
@@ -64,23 +85,25 @@ const Dashboard = React.createClass({
           console.log(followers)
           statsArray.map((athlete) => {
             let getFollower = followers.data.filter((follower) => {
-              return follower.id === athlete.id
+              return follower.firstname === athlete.firstname
             })
             athlete.profile = getFollower[0].profile
           })
-          console.log(statsArray)
           this.setState({timelineData: timeline.data, totalsData: statsArray, pageloaded: true})
+          console.log(statsArray)
         }))
-        .catch(axios.spread((timelineErr, followersErr) => {
-          console.error('axios error', timelineErr)
-          console.error('axios error', followersErr)
-        }))
+        // .catch(axios.spread((timelineErr, followersErr) => {
+          // console.error('axios error', timelineErr)
+          // console.error('axios error', followersErr)
+        // }))
       }
     }
 
+    // getToken()
     getData()
     setTimeout(() => { window.location.reload(true) }, 7200000)
-  },
+  }
+
   render () {
     const updated = Date.now()
 
@@ -129,6 +152,6 @@ const Dashboard = React.createClass({
       </div>
     )
   }
-})
+}
 
 export default Dashboard
