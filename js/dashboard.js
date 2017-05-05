@@ -23,7 +23,7 @@ class Dashboard extends React.Component {
         // params: {
           // client_id: 4522,
           // client_secret: '5d18f1f128d837849163692911f14898883022e1',
-          // code: '76a563a0cb20f4977997887085eb5784ad6bebe7'
+          // code: '3394151c7acea20b64cf8f84b834b56986314bbe'
         // }
       // }
 
@@ -92,10 +92,10 @@ class Dashboard extends React.Component {
           this.setState({timelineData: timeline.data, totalsData: statsArray, pageloaded: true})
           console.log(statsArray)
         }))
-        // .catch(axios.spread((timelineErr, followersErr) => {
-          // console.error('axios error', timelineErr)
-          // console.error('axios error', followersErr)
-        // }))
+        .catch(axios.spread((timelineErr, followersErr) => {
+          console.error('axios error', timelineErr)
+          console.error('axios error', followersErr)
+        }))
       }
     }
 
