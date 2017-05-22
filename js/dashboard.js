@@ -23,7 +23,7 @@ class Dashboard extends React.Component {
         // params: {
           // client_id: 4522,
           // client_secret: '5d18f1f128d837849163692911f14898883022e1',
-          // code: '3394151c7acea20b64cf8f84b834b56986314bbe'
+          // code: 'ba56e9151f8a7f20777ab173fd74885478b370a0'
         // }
       // }
 
